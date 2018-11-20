@@ -3,9 +3,9 @@ import "./App.css";
 
 function App() {
   const [hooList, hookItems] = useState([
-    { text: "Learn about React" },
-    { text: "Meet friend for lunch" },
-    { text: "Build really cool todo app" }
+    { text: "hooks" },
+    { text: "fishing" },
+    { text: "fish for fishing" }
   ]);
 
   // Starting some hooks or so i think
