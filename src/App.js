@@ -11,12 +11,14 @@ const HookList = ({ hookList }) => (
 function HookForm({ addHookItem }) {
   const [value, setValue] = useState("");
 
+  // standard React Submit function
   const handleSubmit = event => {
     event.preventDefault();
     if (!value) return;
     addHookItem(value);
     setValue("");
   };
+  // standard form render using setValue according to the state vars assigned up top
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -30,7 +32,7 @@ function HookForm({ addHookItem }) {
   );
 }
 
-// initialization of app
+// initialization of app main render mumble
 function App() {
   const [hookList, hookListItems] = useState([
     { mumble: "hooks, also know as left hook, right hook" },
@@ -39,8 +41,8 @@ function App() {
     { mumble: "mumbling again, mumble Mc Mo Mumble" }
   ]);
 
-  const addHookItem = mumble => {
-    const newHookItems = [...hookList, { mumble }];
+  const addHookItem = hookList => {
+    const newHookItems = [...hookList, { hookList }];
     hookListItems(newHookItems);
   };
   // Standard map render
