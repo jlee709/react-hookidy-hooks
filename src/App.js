@@ -5,6 +5,28 @@ import "./App.css";
 const HookList = ({ hookList }) => (
   <div className="hook-list">{hookList.mumble}</div>
 );
+
+function HookForm({ addHookItem }) {
+  const [value, setValue] = useState("");
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    if (!value) return;
+    addHookItem(value);
+    setValue("");
+  };
+  return (
+    <form onSubmit={this.handleSubmit}>
+      <input
+        type="text"
+        className="input"
+        value={this.value}
+        onChange={event => this.setValue(event.target.value)}
+      />
+    </form>
+  );
+}
+
 // initialization of app
 function App() {
   const [hookList, hookListItems] = useState([
@@ -14,6 +36,10 @@ function App() {
     { mumble: "mumbling again, mumble Mc Mo Mumble" }
   ]);
 
+  const addHookItem = mumble => {
+    const newHookItems = [...hookList, { mumble }];
+    hookListItems(newHookItems);
+  };
   // Standard map render
   return (
     <div className="app">
@@ -21,6 +47,7 @@ function App() {
         {hookList.map((hookList, index) => (
           <HookList key={index} index={index} hookList={hookList} />
         ))}
+        <HookForm addHookItem={addHookItem} />
       </div>
     </div>
   );
