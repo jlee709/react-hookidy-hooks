@@ -34,22 +34,41 @@ function HookForm({ addHookItem }) {
 
 // initialization of app main render mumble
 function App() {
-  const [hookList, hookListItems] = useState([
-    { mumble: "hooks, also known as left hook, right hook" },
-    { mumble: "fishing, or is it phising?? or fssssshing???" },
-    { mumble: "can you make sense of the mumbles in this rumble?" },
-    { mumble: "mumbling again, mumble Mc Mo Mumble" },
-    { mumble: "An Alliteration-Sensation!" }
+  const [hookList, hookListItems, isGoodMumble] = useState([
+    {
+      mumble: "hooks, also known as left hook, right hook",
+      isGoodMumble: false
+    },
+    {
+      mumble: "fishing, or is it phising?? or fssssshing???",
+      isGoodMumble: false
+    },
+    {
+      mumble: "can you make sense of the mumbles in this rumble?",
+      isGoodMumble: false
+    },
+    { mumble: "mumbling again, mumble Mc Mo Mumble", isGoodMumble: false },
+    {
+      mumble: "An Alliteration-Sensation! With an exclamation!",
+      isGoodMumble: false
+    }
   ]);
 
   const addHookItem = mumble => {
     const newHookItems = [...hookList, { mumble }];
     hookListItems(newHookItems);
   };
+
+  const updateMumble = mumble => {
+    const updatedMumble = [...hookList];
+    updatedMumble[mumble].isGoodMumble = true;
+    hookListItems(updatedMumble);
+  };
   // Standard map render
   return (
     <div className="app">
       <div className="hook-list">
+        <h1>Mumble List</h1>
         {hookList.map((hookList, index) => (
           <HookList key={index} index={index} hookList={hookList} />
         ))}
