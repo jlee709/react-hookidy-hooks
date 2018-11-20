@@ -42,14 +42,14 @@ function App() {
     { mumble: "An Alliteration-Sensation!" }
   ]);
 
-  const addHookItem = hookList => {
-    const newHookItems = [...hookList, { hookList }];
+  const addHookItem = hookListItem => {
+    const newHookItems = [...hookList, { hookListItem }];
     hookListItems(newHookItems);
   };
   // Standard map render
   return (
     <div className="app">
-      <div className="hook-list-items">
+      <div className="hook-list">
         {hookList.map((hookList, index) => (
           <HookList key={index} index={index} hookList={hookList} />
         ))}

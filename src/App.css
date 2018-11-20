@@ -1,6 +1,6 @@
 .app {
   background: rgb(23, 155, 66, 0.7);
-  padding: 3rem;
+  padding: 30px;
   height: 100vh;
 }
 
@@ -9,17 +9,16 @@
   border-radius: 1rem;
   padding: 1rem;
   max-width: 100%;
-  display: flex;
 }
 
 .hook-list-items {
   background: rgb(179, 11, 11);
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
-  padding: 1rem 1rem;
-  font-size: 1rem;
-  margin: 0.5rem;
-  border-radius: 1rem;
-  display: inline-block;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 3px 10px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
