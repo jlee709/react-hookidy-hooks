@@ -35,10 +35,11 @@ function HookForm({ addHookItem }) {
 // initialization of app main render mumble
 function App() {
   const [hookList, hookListItems] = useState([
-    { mumble: "hooks, also know as left hook, right hook" },
+    { mumble: "hooks, also known as left hook, right hook" },
     { mumble: "fishing, or is it phising?? or fssssshing???" },
     { mumble: "can you make sense of the mumbles in this rumble?" },
-    { mumble: "mumbling again, mumble Mc Mo Mumble" }
+    { mumble: "mumbling again, mumble Mc Mo Mumble" },
+    { mumble: "An Alliteration-Sensation!" }
   ]);
 
   const addHookItem = hookList => {
