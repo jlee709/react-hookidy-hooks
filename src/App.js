@@ -6,6 +6,8 @@ const HookList = ({ hookList }) => (
   <div className="hook-list">{hookList.mumble}</div>
 );
 
+// form w/hooks takes adds item
+// set 2 variables to empty string with useState Function
 function HookForm({ addHookItem }) {
   const [value, setValue] = useState("");
 
