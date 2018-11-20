@@ -42,8 +42,8 @@ function App() {
     { mumble: "An Alliteration-Sensation!" }
   ]);
 
-  const addHookItem = hookListItem => {
-    const newHookItems = [...hookList, { hookListItem }];
+  const addHookItem = mumble => {
+    const newHookItems = [...hookList, { mumble }];
     hookListItems(newHookItems);
   };
   // Standard map render
