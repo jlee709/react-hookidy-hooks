@@ -21,6 +21,7 @@ function HookForm({ addHookItem }) {
         type="text"
         className="input"
         value={value}
+        placeholder={"mumbles GO here"}
         onChange={event => setValue(event.target.value)}
       />
     </form>
