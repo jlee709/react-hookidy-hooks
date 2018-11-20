@@ -16,12 +16,12 @@ function HookForm({ addHookItem }) {
     setValue("");
   };
   return (
-    <form onSubmit={this.handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         className="input"
-        value={this.value}
-        onChange={event => this.setValue(event.target.value)}
+        value={value}
+        onChange={event => setValue(event.target.value)}
       />
     </form>
   );
