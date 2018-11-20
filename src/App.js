@@ -1,19 +1,26 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [hooList, hookItems] = useState([
+  const [hookList] = useState([
     { text: "hooks" },
     { text: "fishing" },
     { text: "fish for fishing" }
   ]);
 
+  const HookList = ({ hookList }) => (
+    <div className="hook-list">{hookList.text}</div>
+  );
+
   // Starting some hooks or so i think
   return (
-    <div>
-      <h2>Yikes this is getting weird</h2>
+    <div className="app">
+      <div className="hook-list">
+        {hookList.map((hookList, index) => (
+          <HookList key={index} index={index} hookList={hookList} />
+        ))}
+      </div>
     </div>
   );
 }
-
 export default App;
