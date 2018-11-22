@@ -31,6 +31,7 @@ function HookForm({ addHookItem }) {
     </form>
   );
 }
+// Consider setting variables sim to normal oops
 
 // initialization of app main render mumble
 function App() {
