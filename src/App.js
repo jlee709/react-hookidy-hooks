@@ -36,6 +36,7 @@ function HookForm({ addHookItem }) {
 // Consider setting variables sim to normal oops
 
 // initialization of app main render mumble
+// set extra hooks
 function App() {
   const [hookList, hookListItems, isGoodMumble] = useState([
     {
